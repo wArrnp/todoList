@@ -1,0 +1,22 @@
+.todo-item {
+    display: inline-block;
+    height: 2rem;
+    width: 95%;
+    box-shadow: 1px 1px 1px;
+}
+
+.todo-text {
+    width: 80%;
+}
+
+.todo-remove {
+    justify-content: flex-end;
+}
+
+.done {
+    background-color: rgba(100,100,100, 0.7)
+}
+
+.done .todo-text {
+    text-decoration-line: line-through
+}

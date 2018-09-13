@@ -10,7 +10,7 @@ export const removeTodo = createAction(REMOVE_TODO);
 export const changeTodo = createAction(CHANGE_TODO);
 
 const initialState = List([
-
+    
 ])
 
 export default handleActions({
