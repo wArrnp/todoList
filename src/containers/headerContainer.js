@@ -5,9 +5,9 @@ import { Map } from 'immutable';
 
 import * as todoActions from '../modules/todo';
 
-import header from '../components/header';
+import Header from '../components/header';
 
-class header extends Component {
+class headerContainer extends Component {
     handleAdd = () => {
         const { TodoAction } = this.props;
 
@@ -29,7 +29,7 @@ class header extends Component {
     render() {
         return (
             <div>
-                <header onAdd={this.handleAdd} />
+                <Header onAdd={this.handleAdd} />
             </div>
         );
     }
@@ -40,4 +40,4 @@ export default connect(
     (dispatch) => ({
         TodoAction: bindActionCreators(todoActions, dispatch)
     })
-)(header);
+)(headerContainer);
