@@ -10,7 +10,7 @@ class todoItem extends Component {
         return (
             <div className={`todo-item ${done? 'done': ''}`}>
                 <p className="todo-text" onClick={() => onToggle(id)}>{text}</p>
-                <button className="todo-remove" onClick={() => onRemove(id)}>엑스</button>
+                <button className="todo-remove" onClick={() => onRemove(id)}>X</button>
             </div>
         );
     }

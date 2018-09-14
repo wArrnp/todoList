@@ -30,6 +30,7 @@ class componentName extends Component {
                 id={contact.get('id')} 
                 text={contact.get('text')} 
                 done={contact.get('done')} 
+                key={contact.get('id')}
             />
         ))
 

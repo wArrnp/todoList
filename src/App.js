@@ -8,9 +8,11 @@ import './App.css'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <HeaderContainer />
-        <TodoListContainer />
+      <div className="app">
+        <div className="main-container">
+          <HeaderContainer />
+          <TodoListContainer />
+        </div>
       </div>
     );
   }
