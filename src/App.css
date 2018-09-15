@@ -4,11 +4,13 @@
 }
 
 .main-container {
+  margin-top: 50px;
   display: flex;
   border: 1.3px solid rgba(200,200,200, 0.4);
   justify-content: center;
   width: 40%;
   box-shadow: 0px 3px 6px rgba(200,200,200, 0.5);
   flex-direction: column;
-  background-color: rgba(200,200,200, 0.1)
+  background-color: rgba(200,200,200, 0.1);
+  padding: 5px 5px;
 }

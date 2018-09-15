@@ -9,7 +9,7 @@ const RESET_TODO = 'todo/RESET_TODO';
 export const addTodo = createAction(ADD_TODO);
 export const removeTodo = createAction(REMOVE_TODO);
 export const changeTodo = createAction(CHANGE_TODO);
-export const resetTodo = createAction(REMOVE_TODO);
+export const resetTodo = createAction(RESET_TODO);
 
 const initialState = List([
     
@@ -29,5 +29,6 @@ export default handleActions({
     },
     [RESET_TODO]: (state, action) => {
         // RESET_TODO 기능 추가 부분
+        return List([])
     }
 }, initialState)

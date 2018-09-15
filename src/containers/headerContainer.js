@@ -8,16 +8,31 @@ import * as todoActions from '../modules/todo';
 import Header from '../components/header';
 
 class headerContainer extends Component {
-    handleAdd = (text) => {
+    handleAdd = () => {
         const { TodoAction } = this.props;
 
         const base = Map({
             id: this.id++,
-            text: text,
+            text: this.state.text,
             done: false
         })
-        console.log(base)
+        
+        this.setState({
+            text: ''
+        })
+
         TodoAction.addTodo(base);
+    }
+
+    
+    handleChange = (e) => {
+        this.setState({
+            text: e.target.value
+        });
+    }
+
+    state = {
+        text: ''
     }
 
     id = 0
@@ -26,7 +41,7 @@ class headerContainer extends Component {
     render() {
         return (
             <Fragment>
-                <Header onAdd={this.handleAdd} />
+                <Header onAdd={this.handleAdd} onChange={this.handleChange} text={this.state.text} />
             </Fragment>
         );
     }
