@@ -11,7 +11,6 @@ class header extends Component {
                 <div className="title">
                     <span>MY-TODO</span>
                 </div>
-                <br />
                 <div className="input-box">
                     <input type="text" className="input-text" value={text} onChange={onChange} placeholder="할 일을 입력합시오."/>
                     <button onClick={onAdd}className="submit-button">+</button>
