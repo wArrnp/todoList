@@ -1,30 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import * as todoActions from '../modules/todo';
+import * as todoActions from "../modules/todo";
 
-import ResetTodo from '../components/resetBtn';
+import ResetTodo from "../components/ResetBtn";
 
-class componentName extends Component {
-    handleReset = () => {
-        const { TodoActions } = this.props;
+class ResetContainer extends Component {
+  handleReset = () => {
+    const { TodoActions } = this.props;
 
-        TodoActions.resetTodo();
-    }
+    TodoActions.resetTodo();
+  };
 
-    render() {
-        return (
-            <div>
-                <ResetTodo onReset={this.handleReset} />
-            </div>
-        );
-    }
+  render() {
+    return <ResetTodo onReset={this.handleReset} />;
+  }
 }
 
 export default connect(
-    null,
-    (dispatch) => ({
-        TodoActions: bindActionCreators(todoActions, dispatch)
-    })
-)(componentName);
+  null,
+  dispatch => ({
+    TodoActions: bindActionCreators(todoActions, dispatch)
+  })
+)(ResetContainer);

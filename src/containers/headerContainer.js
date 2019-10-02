@@ -1,53 +1,55 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from 'redux';
-import { Map } from 'immutable';
+import { bindActionCreators } from "redux";
+import { Map } from "immutable";
 
-import * as todoActions from '../modules/todo';
+import * as todoActions from "../modules/todo";
 
-import Header from '../components/header';
+import Header from "../components/Header";
 
-class headerContainer extends Component {
-    handleAdd = () => {
-        const { TodoAction } = this.props;
+class HeaderContainer extends Component {
+  handleAdd = () => {
+    const { TodoAction } = this.props;
 
-        const base = Map({
-            id: this.id++,
-            text: this.state.text,
-            done: false
-        })
-        
-        this.setState({
-            text: ''
-        })
+    const base = Map({
+      id: this.id++,
+      text: this.state.text,
+      done: false
+    });
 
-        TodoAction.addTodo(base);
-    }
+    this.setState({
+      text: ""
+    });
 
-    
-    handleChange = (e) => {
-        this.setState({
-            text: e.target.value
-        });
-    }
+    TodoAction.addTodo(base);
+  };
 
-    state = {
-        text: ''
-    }
+  handleChange = e => {
+    this.setState({
+      text: e.target.value
+    });
+  };
 
-    id = 0
+  state = {
+    text: ""
+  };
 
+  id = 0;
 
-    render() {
-        return (
-            <Header onAdd={this.handleAdd} onChange={this.handleChange} text={this.state.text} />
-        );
-    }
+  render() {
+    return (
+      <Header
+        onAdd={this.handleAdd}
+        onChange={this.handleChange}
+        text={this.state.text}
+      />
+    );
+  }
 }
 
 export default connect(
-    null,
-    (dispatch) => ({
-        TodoAction: bindActionCreators(todoActions, dispatch)
-    })
-)(headerContainer);
+  null,
+  dispatch => ({
+    TodoAction: bindActionCreators(todoActions, dispatch)
+  })
+)(HeaderContainer);

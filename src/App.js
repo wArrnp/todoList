@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import HeaderContainer from './containers/headerContainer';
-import TodoListContainer from './containers/todoListContainer';
-import ResetContainer from './containers/resetContainer';
+import HeaderContainer from "./containers/HeaderContainer";
+import TodoListContainer from "./containers/TodoListContainer";
+import ResetContainer from "./containers/ResetContainer";
 
-import './App.css'
+import "./App.css";
 
 class App extends Component {
   render() {
