@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { Map } from 'immutable';
@@ -40,9 +40,7 @@ class headerContainer extends Component {
 
     render() {
         return (
-            <Fragment>
-                <Header onAdd={this.handleAdd} onChange={this.handleChange} text={this.state.text} />
-            </Fragment>
+            <Header onAdd={this.handleAdd} onChange={this.handleChange} text={this.state.text} />
         );
     }
 }
