@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 
 import "./css/header.css";
 
-class header extends Component {
+class Header extends Component {
   render() {
     const { onAdd, onChange, text } = this.props;
     return (
@@ -27,4 +27,4 @@ class header extends Component {
   }
 }
 
-export default header;
+export default Header;
